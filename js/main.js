@@ -1,5 +1,6 @@
 // Change the second argument to your options:
 // https://github.com/sampotts/plyr/#options
+import Plyr from 'plyr';
 const player = new Plyr('video', {captions: {active: true}});
 
 // Expose player so it can be used from the console
