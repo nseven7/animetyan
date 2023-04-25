@@ -9,6 +9,15 @@
     <title>Anime Player</title> 
 </head>
 <body>
-    <iframe src="https://nseven7.github.io/videoplayer/plyr-page"></iframe>
+  <div id="player"></div>
+  <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+  <script>
+    const videoSrc = prompt("Enter video URL"); // Запросите у пользователя URL-адрес видео
+    const playerDiv = document.querySelector('#player');
+    const video = document.createElement('video');
+    video.src = videoSrc;
+    playerDiv.appendChild(video);
+    const player = new Plyr(video);
+  </script>
 </body>
 </html>
